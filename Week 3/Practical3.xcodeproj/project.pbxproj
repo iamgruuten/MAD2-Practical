@@ -15,6 +15,7 @@
 		18DA76EB2552CA03007C65A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DA76E92552CA03007C65A9 /* LaunchScreen.storyboard */; };
 		18DA76F62552CA04007C65A9 /* Practical3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA76F52552CA04007C65A9 /* Practical3Tests.swift */; };
 		18DA77012552CA04007C65A9 /* Practical3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA77002552CA04007C65A9 /* Practical3UITests.swift */; };
+		18DA77122552D307007C65A9 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DA77112552D307007C65A9 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		18DA76FC2552CA04007C65A9 /* Practical3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Practical3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DA77002552CA04007C65A9 /* Practical3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practical3UITests.swift; sourceTree = "<group>"; };
 		18DA77022552CA04007C65A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18DA77112552D307007C65A9 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				18DA76E72552CA03007C65A9 /* Assets.xcassets */,
 				18DA76E92552CA03007C65A9 /* LaunchScreen.storyboard */,
 				18DA76EC2552CA03007C65A9 /* Info.plist */,
+				18DA77112552D307007C65A9 /* ViewController.xib */,
 			);
 			path = Practical3;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				18DA76EB2552CA03007C65A9 /* LaunchScreen.storyboard in Resources */,
 				18DA76E82552CA03007C65A9 /* Assets.xcassets in Resources */,
+				18DA77122552D307007C65A9 /* ViewController.xib in Resources */,
 				18DA76E62552CA02007C65A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
