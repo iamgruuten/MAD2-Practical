@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDContact" representedClassName="CDContact" syncable="YES">
+        <attribute name="firstname" optional="YES" attributeType="String"/>
+        <attribute name="lastname" optional="YES" attributeType="String"/>
+        <attribute name="mobileno" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CDFriend" representedClassName="CDFriend" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="profileImageName" optional="YES" attributeType="String"/>
+        <relationship name="lastMessage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMessage"/>
+        <relationship name="message" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMessage" inverseName="friend" inverseEntity="CDMessage"/>
+    </entity>
+    <entity name="CDMessage" representedClassName="CDMessage" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isSender" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="friend" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFriend" inverseName="message" inverseEntity="CDFriend"/>
+    </entity>
+    <elements>
+        <element name="CDContact" positionX="-146.3203125" positionY="-27.98828125" width="128" height="88"/>
+        <element name="CDFriend" positionX="220.01171875" positionY="-20.11328125" width="128" height="103"/>
+        <element name="CDMessage" positionX="421.70703125" positionY="23.58984375" width="128" height="103"/>
+    </elements>
+</model>

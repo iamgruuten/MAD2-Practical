@@ -14,13 +14,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+        
+        //Start up scene
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         
         window?.windowScene = windowScene
         
+        
+        //nibName indicates the viewcontroller window
         let viewController = ViewController(nibName: "ViewController", bundle: nil)
+        
         self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
     }
