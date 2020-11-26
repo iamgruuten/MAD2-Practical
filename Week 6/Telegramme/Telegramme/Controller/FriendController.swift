@@ -53,7 +53,6 @@ class FriendController{
             let friendList = try context.fetch(fetchRequest)
             let friend = friendList[0]
             messageFriend.setValue(friend, forKey: "friend")
-
             try context.save()
             print("Added")
         } catch let error as NSError {
@@ -65,6 +64,18 @@ class FriendController{
         let entity = NSEntityDescription.entity(forEntityName: "CDFriend", in: context)
 
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName:"CDFriend")
-        fetchRequest.predicate = NSPredicate(format: <#T##String#>, <#T##args: CVarArg...##CVarArg#>)
+        fetchRequest.predicate = NSPredicate(format: "name = %@", friend.name)
+        
+        do{
+            let messageList = try context.fetch(fetchRequest);
+            let message = messageList[0];
+            message.value(forKey: "message")
+            message.value(forKey: "lastmessage")
+
+            print(message)
+        }catch let error as NSError{
+            print(error)
+        }
+        
     }
 }

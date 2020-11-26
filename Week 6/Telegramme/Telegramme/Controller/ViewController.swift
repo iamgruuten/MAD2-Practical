@@ -12,10 +12,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var usrNameField: UITextField!
     @IBOutlet weak var pwdFld: UITextField!
     
+    var friendController:FriendController = FriendController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func loginBtn(_ sender: Any) {
