@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="22j-f2-nnA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Qr Camera-->
+        <scene sceneID="NHg-EF-kYn">
+            <objects>
+                <viewController storyboardIdentifier="camerea" title="Qr Camera" id="SmN-pc-zZS" customClass="GenerateController" customModule="MyQrScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4tC-zv-LfA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XZd-ae-x1N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="QR Camera" id="wvg-B8-Psx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wM5-x2-hTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677" y="441"/>
+        </scene>
+        <!--Qr Generator-->
+        <scene sceneID="89B-Mo-WQS">
+            <objects>
+                <viewController storyboardIdentifier="qrGenerator" title="Qr Generator" id="VsO-Hc-QgV" customClass="ScanController" customModule="MyQrScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Nq-W6-1hL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bph-ca-04H">
+                                <rect key="frame" x="87" y="264" width="240" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mvd-z8-NYj">
+                                <rect key="frame" x="56" y="152" width="303" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="urlExit:" destination="VsO-Hc-QgV" eventType="editingDidEndOnExit" id="RSm-zU-9Ud"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ln1-qF-kqs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Qr Generator" id="AH4-BR-qws"/>
+                    <connections>
+                        <outlet property="qrImageview" destination="bph-ca-04H" id="aIL-Wv-rAu"/>
+                        <outlet property="urlTextFld" destination="Mvd-z8-NYj" id="aKa-sa-7yW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XYS-Ea-wiJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1676.8115942028987" y="-938.16964285714278"/>
+        </scene>
+        <!--Favourites-->
+        <scene sceneID="onq-4Z-7E6">
+            <objects>
+                <viewController storyboardIdentifier="Favourtie" title="Favourites" id="z5x-X2-WWW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Daj-3p-pUD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ypC-Mu-ZYg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favourites" selectedImage="star.fill" catalog="system" id="3h0-lU-fzL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xm5-g1-HDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1678" y="-210"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IWo-rm-FS7">
+            <objects>
+                <tabBarController storyboardIdentifier="Content" id="22j-f2-nnA" customClass="ViewController" customModule="MyQrScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="anL-kB-HeH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VsO-Hc-QgV" kind="relationship" relationship="viewControllers" id="Zgw-Cg-vRW"/>
+                        <segue destination="z5x-X2-WWW" kind="relationship" relationship="viewControllers" id="CPr-0N-Zts"/>
+                        <segue destination="SmN-pc-zZS" kind="relationship" relationship="viewControllers" id="e4g-aD-6za"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJC-aP-eCL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

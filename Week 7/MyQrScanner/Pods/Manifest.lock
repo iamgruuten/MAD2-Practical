@@ -1,0 +1,20 @@
+PODS:
+  - QRCoder (1.1.0)
+  - SimpleQRCode (0.6.2)
+
+DEPENDENCIES:
+  - QRCoder (~> 1.1)
+  - SimpleQRCode (~> 0.6)
+
+SPEC REPOS:
+  trunk:
+    - QRCoder
+    - SimpleQRCode
+
+SPEC CHECKSUMS:
+  QRCoder: cbd2bee531cc86d286df7942334cfed94c803ae4
+  SimpleQRCode: dada59cfa7227f239aa90abb93a825f5ac52c235
+
+PODFILE CHECKSUM: b303de12af53a2c56b0e76f2c4c343ae7f6ae9c2
+
+COCOAPODS: 1.10.0

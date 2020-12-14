@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-MyQrScanner/Pods-MyQrScanner-frameworks.sh
+${BUILT_PRODUCTS_DIR}/QRCoder/QRCoder.framework
+${BUILT_PRODUCTS_DIR}/SimpleQRCode/SimpleQRCode.framework

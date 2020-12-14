@@ -20,12 +20,12 @@ class ShowContactViewController : UITableViewController, UIGestureRecognizerDele
         let longPressGesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPress(_:)))
         longPressGesture.minimumPressDuration = 1.0 // 1 second press
         longPressGesture.delegate = self
-        contactList = contactController.retrieveContact()
+        contactList = contactController.retrieveContact()!
         self.tableView.addGestureRecognizer(longPressGesture)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        contactList = contactController.retrieveContact()
+        contactList = contactController.retrieveContact()!
         self.tableView.reloadData();
     }
     
@@ -94,7 +94,7 @@ class ShowContactViewController : UITableViewController, UIGestureRecognizerDele
 extension ShowContactViewController : updateContactDelegate{
     func didSendMessage(_ message:String) {
             print("Contact is updated view " + message)
-            contactList = contactController.retrieveContact()
+        contactList = contactController.retrieveContact()!
             self.tableView.reloadData();
     }
 }

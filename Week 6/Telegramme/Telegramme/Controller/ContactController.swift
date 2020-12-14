@@ -11,12 +11,11 @@ import CoreData
 class ContactController{
     
     
-    var appDelegate:AppDelegate
-    var context:NSManagedObjectContext
+    var appDelegate:AppDelegate = (UIApplication.shared.delegate) as! AppDelegate
+    var context:NSManagedObjectContext 
     
     init() {
         context = appDelegate.persistentContainer.viewContext
-        appDelegate = (UIApplication.shared.delegate) as! AppDelegate
     }
     
     

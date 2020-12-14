@@ -12,21 +12,20 @@ import CoreData
 
 class FriendController{
     
-    var appDelegate:AppDelegate
+    var appDelegate:AppDelegate = (UIApplication.shared.delegate) as! AppDelegate
     var context:NSManagedObjectContext
-    
     
     init() {
         context = appDelegate.persistentContainer.viewContext
-        appDelegate = (UIApplication.shared.delegate) as! AppDelegate
     }
     
-    func AddFriend(friend:Friend){
+    
+    func AddFriend(friendItem:Friend){
         let entityContact = NSEntityDescription.entity(forEntityName: "CDFriend", in: context)
         
         let friend = NSManagedObject(entity: entityContact!, insertInto: context)
-        friend.setValue(friend.name, forKey:"name")
-        friend.setValue(friend.profileImageName, forKey: "profileImageName")
+        friend.setValue(friendItem.name, forKey:"name")
+        friend.setValue(friendItem.profileImageName, forKey: "profileImageName")
         do {
             try context.save()
             print("Added")
@@ -61,21 +60,26 @@ class FriendController{
     }
     
     func retrieveMessageByFriend(friend:Friend) -> [Message] {
-        let entity = NSEntityDescription.entity(forEntityName: "CDFriend", in: context)
 
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName:"CDFriend")
         fetchRequest.predicate = NSPredicate(format: "name = %@", friend.name)
-        
-        do{
-            let messageList = try context.fetch(fetchRequest);
-            let message = messageList[0];
-            message.value(forKey: "message")
-            message.value(forKey: "lastmessage")
+        var message:[Message] = []
 
-            print(message)
+        do{
+
+            let messageList = try context.fetch(fetchRequest);
+            
+            for item in messageList {
+                let messageItem = Message(date: item.value(forKey: "date") as! Date, isSender: item.value(forKey: "isSender") as! Bool, text: item.value(forKey: "message") as! String)
+                
+                message.append(messageItem)
+            }
+            
+
         }catch let error as NSError{
             print(error)
         }
         
+        return message
     }
 }
