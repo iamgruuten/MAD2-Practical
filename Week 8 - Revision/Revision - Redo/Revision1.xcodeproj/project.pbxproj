@@ -14,6 +14,11 @@
 		18919F6C258788E900B1597E /* Revision1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18919F6A258788E900B1597E /* Revision1.xcdatamodeld */; };
 		18919F6E258788EB00B1597E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18919F6D258788EB00B1597E /* Assets.xcassets */; };
 		18919F71258788EB00B1597E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18919F6F258788EB00B1597E /* LaunchScreen.storyboard */; };
+		18919F7D2587917600B1597E /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18919F7C2587917600B1597E /* RecipeTableViewController.swift */; };
+		18919F80258791CA00B1597E /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18919F7F258791CA00B1597E /* RecipeController.swift */; };
+		18919F83258791D900B1597E /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18919F82258791D900B1597E /* Recipe.swift */; };
+		18919F86258791E600B1597E /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18919F85258791E600B1597E /* Ingredient.swift */; };
+		18919F892587973000B1597E /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18919F882587973000B1597E /* AddRecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		18919F6D258788EB00B1597E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18919F70258788EB00B1597E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18919F72258788EB00B1597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18919F7C2587917600B1597E /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		18919F7F258791CA00B1597E /* RecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
+		18919F82258791D900B1597E /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		18919F85258791E600B1597E /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		18919F882587973000B1597E /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +68,19 @@
 		18919F60258788E900B1597E /* Revision1 */ = {
 			isa = PBXGroup;
 			children = (
-				18919F61258788E900B1597E /* AppDelegate.swift */,
 				18919F63258788E900B1597E /* SceneDelegate.swift */,
+				18919F61258788E900B1597E /* AppDelegate.swift */,
 				18919F65258788E900B1597E /* ViewController.swift */,
 				18919F67258788E900B1597E /* Main.storyboard */,
 				18919F6D258788EB00B1597E /* Assets.xcassets */,
 				18919F6F258788EB00B1597E /* LaunchScreen.storyboard */,
 				18919F72258788EB00B1597E /* Info.plist */,
 				18919F6A258788E900B1597E /* Revision1.xcdatamodeld */,
+				18919F7C2587917600B1597E /* RecipeTableViewController.swift */,
+				18919F7F258791CA00B1597E /* RecipeController.swift */,
+				18919F82258791D900B1597E /* Recipe.swift */,
+				18919F85258791E600B1597E /* Ingredient.swift */,
+				18919F882587973000B1597E /* AddRecipeViewController.swift */,
 			);
 			path = Revision1;
 			sourceTree = "<group>";
@@ -140,10 +155,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18919F892587973000B1597E /* AddRecipeViewController.swift in Sources */,
+				18919F83258791D900B1597E /* Recipe.swift in Sources */,
 				18919F66258788E900B1597E /* ViewController.swift in Sources */,
 				18919F62258788E900B1597E /* AppDelegate.swift in Sources */,
 				18919F6C258788E900B1597E /* Revision1.xcdatamodeld in Sources */,
 				18919F64258788E900B1597E /* SceneDelegate.swift in Sources */,
+				18919F7D2587917600B1597E /* RecipeTableViewController.swift in Sources */,
+				18919F80258791CA00B1597E /* RecipeController.swift in Sources */,
+				18919F86258791E600B1597E /* Ingredient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

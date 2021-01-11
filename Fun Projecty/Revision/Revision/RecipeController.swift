@@ -65,8 +65,9 @@ class RecipeController{
                 CDIngredient.setValue(ingredient, forKey: "name")
                 CDIngredient.addToRecipes(tempRecipe)
                 
-                try context.save()
             }
+            try context.save()
+
         }catch let error as NSError{
             print(error)
         }

@@ -85,6 +85,9 @@ class UserController{
         return user
     }
     
+    //One user - Many transaction
+    //One Transaction - One user
+    
     func AddTransactiontoUser(user:User, t:Transaction){
                 
         do{
