@@ -27,9 +27,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         var annotations = [MKAnnotation]()
-
+        
         var annotation = MKPointAnnotation()
         let centerCoordinate = CLLocationCoordinate2D(latitude: 1.333149, longitude:103.774893)
         annotation.coordinate = centerCoordinate
@@ -53,13 +53,23 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let currentCoordinate = CLLocationCoordinate2D(latitude: currentLocation!.coordinate.latitude, longitude:currentLocation!.coordinate.longitude)
         
         annotation = MKPointAnnotation()
-
+        
         annotation.coordinate = currentCoordinate
         annotation.title = "ME"
         annotations.append(annotation)
         
         mapView.addAnnotations(annotations)
-
+                
+        // Boundanries
+        let span = MKCoordinateSpanMake(0.5, 0.5)
+        
+        // or use the current map zoom and just center the map
+        // let span = mapView.region.span
+        
+        // now move the map
+        let region = MKCoordinateRegion(center: pinToZoomOn!.coordinate, span: span)
+        mapView.setRegion(region, animated: true)
+        
         
     }
     
